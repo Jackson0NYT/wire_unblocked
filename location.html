@@ -1,15 +1,29 @@
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="description" content="Unblocked games for the students of WMS">
-    <meta name="keywords" content="playhydra, unblocked games, unblocked, unblocked playhydra">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Unblocked games for the students of WMS"
+    />
+    <meta
+      name="keywords"
+      content="playhydra, unblocked games, unblocked, unblocked playhydra"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LOCATION | WIRE</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
     <div class="nav-container">
-      <a href="index.html"><img src="images/playhydra.png" alt="PLAYHYDRA LOGO" title="PLAYHYDRA" class="logo"></a>
+      <a href="index.html"
+        ><img
+          src="images/playhydra.png"
+          alt="PLAYHYDRA LOGO"
+          title="PLAYHYDRA"
+          class="logo"
+      /></a>
 
       <nav>
         <a href="index.html" class="nav-item">HOME</a>
@@ -19,5 +33,18 @@
     </div>
 
     <h2>LOCATION</h2>
-    <p id="location" data-dashlane-rid="2aeb86b51843084a">PLAYHYDRA can currently be found at <a href="<!DOCTYPE html>
-<html lang=" en"="">
+    <p id="location"></p>
+    <sub><em>BROUGHT TO YOU BY THE STUDENTS OF WMS</em></sub>
+    <script>
+      let p = document.getElementsByTagName("P")[0];
+      const Http = new XMLHttpRequest();
+      const url = "https://lps7x.csb.app/location.txt";
+      Http.open("GET", url);
+      Http.send();
+      Http.onreadystatechange = (e) => {
+        console.log(Http.responseText);
+        p.innerHTML = `PLAYHYDRA can currently be found at <a href="${Http.responseText}">${Http.responseText}</a>`;
+      };
+    </script>
+  </body>
+</html>

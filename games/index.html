@@ -34,5 +34,20 @@
     <center>
     <sub><em>BROUGHT TO YOU BY THE STUDENTS OF WMS</em></sub>
     </center>
+ 
+<button onclick="goFullscreen('1629'); return false">Fullscreen</button>
+ 
+<script>
+function goFullscreen(id) {
+    var element = document.getElementById(1629);
+    if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullScreen) {
+      element.webkitRequestFullScreen();
+    }
+}
+</script>
+}
+</script>
   </body>
 </html>
